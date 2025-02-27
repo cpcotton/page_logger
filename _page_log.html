@@ -1,0 +1,40 @@
+<!-- s_test_log.html -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<link href="/css/s_test_log.css" rel="stylesheet"/>
+<div id="top">
+    <div class="table-container mt-15">
+        <table id="fileTable" class="table table-bordered table-hover fixed-table">
+            <thead class="thead-dark" style="position: sticky; top: 0; z-index: 1020;">
+                <tr>
+                    <th>#</th>
+                    <th onclick="sortTable(1)">File Name</th>
+                    <th onclick="sortTable(2)">Full Name</th>
+                    <th onclick="sortTable(3)">Subdir</th>
+                    <th onclick="sortTable(4)">Bytes</th>
+                    <th onclick="sortTable(5)">Lines</th>
+                    <th onclick="sortTable(6)">Base          <a class="text-end" href="/test/index.html">back to Index</a></th>
+                    <th class="text-center">
+                        <select id="actionDropdown" class="form-select form-select-sm">
+                            <option value="none">Select Action</option>
+                            <option value="filter_file_name">Filter by File Name</option>
+                            <option value="filter_subdir">Filter by Subdir</option>
+                            <option value="filter_base">Filter by Base</option>
+                            <option value="restore">Restore All</option>
+                        </select>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Data will be inserted dynamically here -->
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="text-end">
+    <p><a href="#top"><b>Top</b></a> <a href="/test/index.html">Back to Index</a></p> 
+</div>
+<!-- Custom JS -->
+<script src="_pages_made.js"></script> # better than page load as you can see the data
+<script src="/js/s_site_page_list.js"></script>  
+
+<!-- s_test_log.html --><!-- barefoot.html foot container -->
